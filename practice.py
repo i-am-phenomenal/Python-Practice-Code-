@@ -321,62 +321,113 @@
 # for element in innerContent:
 #     print(element)
 
-from bs4 import BeautifulSoup
-import requests
-import urllib.request
-import re, datetime
-from dateutil.parser import parse
+# from bs4 import BeautifulSoup
+# import requests
+# import urllib.request
+# import re, datetime
+# from dateutil.parser import parse
 
-# import lxml
+# # import lxml
 
-response = requests.get("https://www.data.gov/metrics")
-soup = BeautifulSoup(response.text, "html.parser")
-datasets = soup.find_all(
-    "td", {"class": "datasets_published_per_month_table_row_fields"}
-)
-data = []
-for element in datasets:
-    data.append(element.string)
-
-
-def checkIfNone(element):
-    return element != None and element != "//"
+# response = requests.get("https://www.data.gov/metrics")
+# soup = BeautifulSoup(response.text, "html.parser")
+# datasets = soup.find_all(
+#     "td", {"class": "datasets_published_per_month_table_row_fields"}
+# )
+# data = []
+# for element in datasets:
+#     data.append(element.string)
 
 
-def check_if_date(element):
-    fuzzy = False
-    try:
-        parse(element, fuzzy=fuzzy)
-        return True
-    except ValueError:
-        return False
+# def checkIfNone(element):
+#     return element != None and element != "//"
 
 
-def keep_dates(element):
-    try:
-        int(element)
-        return True
-    except ValueError:
-        return False
+# def check_if_date(element):
+#     fuzzy = False
+#     try:
+#         parse(element, fuzzy=fuzzy)
+#         return True
+#     except ValueError:
+#         return False
 
 
-dates = []
-data = filter(checkIfNone, data)
-data = list(data)
-data = data[15:]
+# def keep_dates(element):
+#     try:
+#         int(element)
+#         return True
+#     except ValueError:
+#         return False
 
-for ele in data:
-    is_date = check_if_date(ele.string)
-    if is_date:
-        dates.append(ele.string)
-    else:
-        pass
 
-updated_dates = filter(keep_dates, dates)
-print(dates)
+# dates = []
+# data = filter(checkIfNone, data)
+# data = list(data)
+# data = data[15:]
+
+# for ele in data:
+#     is_date = check_if_date(ele.string)
+#     if is_date:
+#         dates.append(ele.string)
+#     else:
+#         pass
+
+# updated_dates = filter(keep_dates, dates)
+# print(dates)
 # match = re.search("\d{2}-\d{2}-\d{4}", ele)
 # dates.append(match.group())
 
 # for ele in datasets:
 #     print(ele["href"])
 # print(datasets[0]["href"])
+
+
+# l = ["death", "ok", "dog", "darth","vader"]
+# a = []
+# for i in l:
+#     if 'd' not in i:
+#         l.remove(i)
+#     # else:
+#     #     a.append(i)
+# print(2/0)
+
+
+# from flask import Flask
+# app = Flask(__name__)
+# @app.route('/dummy_router')
+# def dummy_function():
+#     return "Dummy function is here "
+
+
+# if __name__ == '__main__':
+#     app.run()
+
+# app.add_url_rule('/', 'Dummy Message', dummy_function)
+
+# from sklearn.model_selection import train_test_split
+# from sklearn.linear_model import LogisticRegression
+# from sklearn.metrics import classification_report
+# from sklearn.metrics import confusion_matrix, accuracy_score
+# import pandas as pd
+# import numpy as np
+# import seaborn as sns
+# import matplotlib.pyplot as plt
+
+# data_frame = pd.read_csv("diabetes.csv")
+# print(data_frame)
+# x_value = data_frame.drop('Glucose', axis=1)
+# y_value = data_frame['Glucose']
+# x_train, x_test, y_train, y_test = train_test_split(
+#     x_value, y_value, test_size=0.33, random_state=1)
+# logmodel = LogisticRegression()
+# logmodel.fit(x_train, y_train)
+# predictions = logmodel.predict(x_test)
+
+# print(predictions)
+# data_classification_report = classification_report(y_test, predictions)
+# data_confusion_matrix = confusion_matrix(y_test, predictions)
+# data_accuracy_score = accuracy_score(y_test, predictions)
+
+# print(" CLASSIFICATION REPORT ", data_classification_report)
+# print(" CONFUSION MATRIX ", data_confusion_matrix)
+# print(" ACCURACY SCORE ", data_accuracy_score)
