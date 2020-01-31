@@ -1,4 +1,5 @@
 number_characters = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+# False for "9???1???9??1???9"
 
 def slice_array(first_index, string): 
     global number_characters 
