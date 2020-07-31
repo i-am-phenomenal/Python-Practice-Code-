@@ -1,5 +1,5 @@
 # Python sample: how to check the x-sendbird-signature header value
-
+# Created this file to assert the values between the 2 x-signatures in Hive Chat. 
 from __future__ import unicode_literals
 import hashlib, hmac
 
