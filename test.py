@@ -1,136 +1,198 @@
-# list = []
-# minimum = ''
-# for iter in range(0, 5):
-#     element = input("Enter the element")
-#     list.append(element)
-#
-# for iterator in range(0, len(list)):
-#     for iter in range(0, len(list)):
-#         currentCounter = iterator
-#         nextCounter = iter
-#         print("1111", list[currentCounter])
-#         print("+++", list[nextCounter])
-#         if list[currentCounter] <= list[nextCounter]:
-#             minimum = list[currentCounter]
-#         else:
-#              pass
-#
-# print(minimum)
-#  global dict
-#     global currentCounter
-#     listOfValues = files.values()
-#     listOfKeys = files.keys()
-#     for ele in listOfValues:
-#         dict = {ele: listOfValues[currentCounter]}
-#         currentCounter = currentCounter + 1
+l = []
+li = [
+    '1386',
+    '1385',
+    '1384',
+    '1383',
+    '1382',
+    '1381',
+    '1380',
+    '1379',
+    '1378',
+    '1377',
+    '1179',
+    '1178',
+    '1177',
+    '1176',
+    '1175',
+    '1174',
+    '1173',
+    '1172',
+    '1171',
+    '1170',
+    '1089',
+    '1088',
+    '1087',
+    '1086',
+    '1085',
+    '1084',
+    '1083',
+    '1082',
+    '1074',
+    '1072',
+    '1071',
+    '1068',
+    '889',
+    '888',
+    '887',
+    '1476',
+    '1475',
+    '1474',
+    '1473',
+    '1472',
+    '1471',
+    '1471',
+    ]
+for iter in li:
+    s = "LEG-" + str(iter)
+    li.append(s)
 
-# forward = []
-# backward = []
-#
-# def checkIfPallindrome(word):
-#     global forward
-#     global backward
-#     for char in word:
-#         forward.append(char)
-#
-#     print(word[len(word) - 1])
-#
-#     for iter in range((len(word) - 1), 0, -1):
-#         backward.append(word[iter])
-#
-#     print(forward)
-#     print(backward)
-#
-#     if forward == backward:
-#         return  True
-#     else:
-#          return False
-#
-# print(checkIfPallindrome('NITIN1'))
-
-# x = set()
-# print(x)
-# def checkSpeed(speed):
-#     if speed <= 70:
-#         print("Ok")
-#         return
-#     else:
-#         points = int((speed % 70) / 5)
-#         print("Points: ",points)
-#         if points >= 12:
-#             print("License suspended")
-#
-# speed = int(input("Enter the speed of the driver"))
-# checkSpeed(speed)
-# def calculateSum(limit):
-#     listOfNumbers = []
-#     sum = 0
-#     for num in range(0, (limit + 1)):
-#         if (num % 3) == 0 or (num % 5) == 0:
-#             listOfNumbers.append(num)
-#     print(listOfNumbers)
-#
-#     for ele in listOfNumbers:
-#         sum = sum + ele
-#     print("SUm = :", sum)
-#
-# limit = int(input("enter the limit"))
-# calculateSum(limit)
-# def lone_sum(num1, num2, num3):
-#     # numbersList = [num1, num2, num3]
-#     # for ele in numbersList:
-#     #     for iter in range(1, len(numbersList)):
-#     #         if ele == numbersList
-#     if num1 == num2:
-#         return num3
-#     elif num2 == num3:
-#         return num1
-#     elif num1 == num3:
-#         return num2
-#     elif (num1 == num2 and num1 == num3) or (num2 == num1 and num2 == num3) or (num3 == num1 or num3 == num2):
-#         return 0
-#     else:
-#         return (num1 + num2 + num3)
-#
-#
-# num1 = int(input("Enter number 1"))
-# num2 = int(input("Enter number 2"))
-# num3 = int(input("Enter number 3"))
-#
-# sum = lone_sum(num1, num2, num3)
-# print(sum)
-roundedNumbers = []
-sum = 0
-floor  = 0
-ceiling = 0
-def numberRoundUpPositive(number):
-    global roundedNumber
-    global floor
-    if (number % 10) == 0:
-        roundedNumbers.append(number)
-        floor = number
-    else:
-        numberRoundUpPositive(number + 1)
-
-def numberRoundUpNegative(number):
-    global ceiling
-    if (number % 10) == 0:
-        ceiling = number
-    else:
-        numberRoundUpNegative(number - 1)
+print(li)
 
 
-number = int(input("Enter any number"))
-# secondNumber = int(input("Enter any number"))
-# thirdNumber = int(input("Enter any number"))
-numberRoundUpPositive(number)
-numberRoundUpNegative(number)
-print("Floor", floor)
-print("Ceiling", ceiling)
-print(int ((floor + ceiling) / 2))
-if number <= int ((floor + ceiling) / 2):
-    roundedNumbers.append(floor)
-else:
-    roundedNumbers.append(ceiling)
 
-print(roundedNumbers)
+"""
+THESE ISSUES DONT HAVE ANY TEST RUNS STEPS 
+NEED TO CHECK
+LEG-1503 -------------_>>>> {}
+LEG-1294 -------------_>>>> {}
+LEG-1250 -------------_>>>> {}
+LEG-1240 -------------_>>>> {}
+LEG-1239 -------------_>>>> {}
+LEG-1238 -------------_>>>> {}
+LEG-1237 -------------_>>>> {}
+LEG-1232 -------------_>>>> {}
+LEG-1231 -------------_>>>> {}
+LEG-1230 -------------_>>>> {}
+LEG-1229 -------------_>>>> {}
+LEG-1228 -------------_>>>> {}
+LEG-1227 -------------_>>>> {}
+LEG-1226 -------------_>>>> {}
+LEG-1225 -------------_>>>> {}
+LEG-1224 -------------_>>>> {}
+LEG-1223 -------------_>>>> {}
+LEG-1222 -------------_>>>> {}
+LEG-1221 -------------_>>>> {}
+LEG-1218 -------------_>>>> {}
+LEG-1216 -------------_>>>> {}
+LEG-1215 -------------_>>>> {}
+LEG-1214 -------------_>>>> {}
+LEG-1211 -------------_>>>> {}
+LEG-1209 -------------_>>>> {}
+LEG-1208 -------------_>>>> {}
+LEG-1206 -------------_>>>> {}
+LEG-1146 -------------_>>>> {}
+LEG-1144 -------------_>>>> {}
+LEG-1142 -------------_>>>> {}
+LEG-1130 -------------_>>>> {}
+LEG-1121 -------------_>>>> {}
+LEG-1078 -------------_>>>> {}
+LEG-1077 -------------_>>>> {}
+LEG-1016 -------------_>>>> {}
+LEG-1015 -------------_>>>> {}
+LEG-996 -------------_>>>> {}
+LEG-995 -------------_>>>> {}
+LEG-994 -------------_>>>> {}
+LEG-993 -------------_>>>> {}
+LEG-992 -------------_>>>> {}
+LEG-991 -------------_>>>> {}
+LEG-990 -------------_>>>> {}
+LEG-989 -------------_>>>> {}
+LEG-987 -------------_>>>> {}
+LEG-986 -------------_>>>> {}
+LEG-985 -------------_>>>> {}
+LEG-984 -------------_>>>> {}
+LEG-983 -------------_>>>> {}
+LEG-982 -------------_>>>> {}
+LEG-981 -------------_>>>> {}
+LEG-949 -------------_>>>> {}
+LEG-948 -------------_>>>> {}
+LEG-947 -------------_>>>> {}
+LEG-946 -------------_>>>> {}
+LEG-945 -------------_>>>> {}
+LEG-936 -------------_>>>> {}
+LEG-935 -------------_>>>> {}
+LEG-934 -------------_>>>> {}
+LEG-933 -------------_>>>> {}
+LEG-932 -------------_>>>> {}
+LEG-930 -------------_>>>> {}
+LEG-929 -------------_>>>> {}
+LEG-928 -------------_>>>> {}
+LEG-927 -------------_>>>> {}
+LEG-926 -------------_>>>> {}
+LEG-925 -------------_>>>> {}
+LEG-924 -------------_>>>> {}
+LEG-923 -------------_>>>> {}
+LEG-922 -------------_>>>> {}
+LEG-921 -------------_>>>> {}
+LEG-920 -------------_>>>> {}
+LEG-919 -------------_>>>> {}
+LEG-918 -------------_>>>> {}
+LEG-917 -------------_>>>> {}
+LEG-916 -------------_>>>> {}
+LEG-915 -------------_>>>> {}
+LEG-914 -------------_>>>> {}
+LEG-913 -------------_>>>> {}
+LEG-912 -------------_>>>> {}
+LEG-911 -------------_>>>> {}
+LEG-910 -------------_>>>> {}
+LEG-909 -------------_>>>> {}
+LEG-908 -------------_>>>> {}
+LEG-907 -------------_>>>> {}
+LEG-906 -------------_>>>> {}
+LEG-905 -------------_>>>> {}
+LEG-904 -------------_>>>> {}
+LEG-903 -------------_>>>> {}
+LEG-902 -------------_>>>> {}
+LEG-901 -------------_>>>> {}
+LEG-897 -------------_>>>> {}
+LEG-874 -------------_>>>> {}
+LEG-873 -------------_>>>> {}
+LEG-872 -------------_>>>> {}
+LEG-871 -------------_>>>> {}
+LEG-870 -------------_>>>> {}
+LEG-869 -------------_>>>> {}
+LEG-868 -------------_>>>> {}
+LEG-867 -------------_>>>> {}
+LEG-866 -------------_>>>> {}
+LEG-846 -------------_>>>> {}
+LEG-817 -------------_>>>> {}
+LEG-796 -------------_>>>> {}
+LEG-794 -------------_>>>> {}
+LEG-790 -------------_>>>> {}
+LEG-789 -------------_>>>> {}
+LEG-788 -------------_>>>> {}
+LEG-786 -------------_>>>> {}
+LEG-778 -------------_>>>> {}
+LEG-777 -------------_>>>> {}
+LEG-776 -------------_>>>> {}
+LEG-775 -------------_>>>> {}
+LEG-774 -------------_>>>> {}
+LEG-773 -------------_>>>> {}
+LEG-772 -------------_>>>> {}
+LEG-771 -------------_>>>> {}
+LEG-770 -------------_>>>> {}
+LEG-769 -------------_>>>> {}
+LEG-768 -------------_>>>> {}
+LEG-766 -------------_>>>> {}
+LEG-764 -------------_>>>> {}
+LEG-763 -------------_>>>> {}
+LEG-762 -------------_>>>> {}
+LEG-761 -------------_>>>> {}
+LEG-735 -------------_>>>> {}
+LEG-734 -------------_>>>> {}
+LEG-733 -------------_>>>> {}
+LEG-732 -------------_>>>> {}
+LEG-722 -------------_>>>> {}
+LEG-721 -------------_>>>> {}
+LEG-720 -------------_>>>> {}
+LEG-719 -------------_>>>> {}
+LEG-718 -------------_>>>> {}
+LEG-717 -------------_>>>> {}
+LEG-716 -------------_>>>> {}
+LEG-715 -------------_>>>> {}
+LEG-714 -------------_>>>> {}
+LEG-713 -------------_>>>> {}
+LEG-712 -------------_>>>> {}
+LEG-620 -------------_>>>> {}
+"""

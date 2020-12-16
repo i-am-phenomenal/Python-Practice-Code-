@@ -40,8 +40,8 @@ ball.penup()
 ball.goto(0, 0)
 ball.shape("square")
 ball.direction = "stop"
-ball.dx = 5
-ball.dy = 5
+ball.dx = 7
+ball.dy = 7
 
 firstScoreArea = turtle.Turtle()
 firstScoreArea.speed(0)
@@ -123,7 +123,7 @@ window.onkeypress(move_left_paddle_up, "w")
 window.onkeypress(move_left_paddle_down, "s")
 window.onkey(exit_game, "P")
 window.onclick(get_mouse_coordinates)
-
+window.onkey(exit_game, "p")
 
 while shouldNotExit:
     window.update()
