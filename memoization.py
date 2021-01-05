@@ -15,9 +15,13 @@ def memoize(function):
 def cube(val): 
     return val ** 3
 
-withoutMemoization = timeit('cube(2)', globals=globals(), number=1)
-memoized = memoize(cube)
-withMemoization = timeit('memoized(2)', globals=globals(), number=1)
-print(withoutMemoization)
-print(withMemoization)
-print(withMemoization > withoutMemoization)
+# withoutMemoization = timeit('cube(2)', globals=globals(), number=1)
+# memoized = memoize(cube)
+# withMemoization = timeit('memoized(2)', globals=globals(), number=1)
+# print(withoutMemoization)
+# print(withMemoization)
+# print(withMemoization > withoutMemoization)
+
+import who_is_on_my_wifi
+
+print(who_is_on_my_wifi.who())
